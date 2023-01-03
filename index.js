@@ -1,24 +1,18 @@
-// var fs = require('fs');
-// var pdf = require('html-pdf');
-// var html = fs.readFileSync('./page/home.html', 'utf8');
-// var options = { 
-//   format: 'A4',
-//   orientation: "landscape",
-// };
+const fs = require('fs');
+const puppeteer = require('puppeteer')
+ 
+async function printPDF() {
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  await page.goto('http://127.0.0.1:5500/page/home.html', {waitUntil: 'networkidle0'});
+  const pdf = await page.pdf({ format: 'A4', landscape: true, printBackground: true });
+  await browser.close();
 
-// pdf.create(html, options).toFile('./businesscard.pdf', function(err, res) {
-//   if (err) return console.log(err);
-//   console.log(res);
-// });
+  fs.writeFile('./cpr.pdf', pdf, err => {
+    if (err) {
+      console.error(err);
+    }
+  });
+}
 
-const cashflow = require('./cashflow-obj.json');
-console.log(cashflow);
-const openingBalance = cashflow.cashflowObj[0].openingBalance;
-
-let htmlOpeningBalance = '';
-
-openingBalance.forEach(opening => {
-  htmlOpeningBalance += `<td class="padding-3"><span>${(Math.round(opening * 100) / 100).toFixed(2)}</span></td>\n`;
-});
-
-console.log(htmlOpeningBalance);
+printPDF();

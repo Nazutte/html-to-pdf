@@ -15,23 +15,24 @@
     }
     table {
       border-collapse: collapse;
+      width: 100%;
+      font-size: 6px;
+      font-family: Avenir, Helvetica, Arial, sans-serif;
     }
     .class-b {
-      font-family: Avenir, Helvetica, Arial, sans-serif;
       font-weight: bold;
-      font-size: 7px;
     }
     .padding-3 {
       padding: 3px;
     }
-    .text-right {
-      text-align: right;
+    .bg-blue {
+      background-color: #90c2eb;
     }
   </style>
 </head>
 
-<body>
-  <table style="width:100%">
+<body style="padding: 10px">
+  <!-- <table style="width:100%">
     <tr style="text-align: center; background-color: #90c2eb;" class="class-b">
       <td style="width: 200px;" class="padding-3">Details</td>
       <td class="padding-3">1</td>
@@ -53,7 +54,7 @@
     </tr>
 
     <tr style="text-align: left;" class="class-b">
-      <td style="text-transform: uppercase; color: #008000; padding-top: 8px; padding-bottom: 8px;">cash in</td>
+      <td style="text-transform: uppercase; color: #008000; padding-top: 6px; padding-bottom: 6px;">cash in</td>
       <td></td>
       <td></td>
       <td></td>
@@ -95,7 +96,5773 @@
     <tr style="background-color: #90c2eb;" class="class-b">
       <td colspan="17" style="text-align: left;" class="padding-3">Electricity</td>
     </tr>
-  </table>
+  </table> -->
+
+  <table id="cpr"></table>
 </body>
+
+<script>
+  const data = {
+    "cashflowObj": [
+        {
+            "day": 30,
+            "dailyRecord": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "openingBalance": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "closingBalance": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "cashIn": {
+                "electricity": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "water": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "sewerage": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "ice": {
+                    "ice": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "otherIncome": {
+                    "miscellaneous": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "gst": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "securityDeposit": {
+                    "securityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                }
+            },
+            "cashOut": {
+                "deposit": {
+                    "cash": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashSecurityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "atm": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "online": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashAgent": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cheque": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashCard": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "directTransfer": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "payment": {
+                    "salary": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "pettyCash": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "securityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "invoice": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "gst": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "cashOutOther": {
+                    "settlement": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                }
+            },
+            "balance": {
+                "id": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "pettyCash": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "allTotal": {
+                "electricity": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "water": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "sewerage": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "otherIncome": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "securityDeposit": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "ice": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashIn": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "deposit": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "payment": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashOutOther": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashOut": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "balance": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "safeBalance": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "day": 30,
+            "dailyRecord": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "openingBalance": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "closingBalance": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "cashIn": {
+                "electricity": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "water": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "sewerage": {
+                    "business": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "businessSpecial": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "government": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "domestic": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "ice": {
+                    "ice": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "otherIncome": {
+                    "miscellaneous": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "gst": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "securityDeposit": {
+                    "securityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                }
+            },
+            "cashOut": {
+                "deposit": {
+                    "cash": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashSecurityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "atm": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "online": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashAgent": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cheque": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "cashCard": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "directTransfer": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "payment": {
+                    "salary": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "pettyCash": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "securityDeposit": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "invoice": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ],
+                    "gst": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                },
+                "cashOutOther": {
+                    "settlement": [
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        },
+                        {
+                            "id": null,
+                            "amount": null,
+                            "comment": null
+                        }
+                    ]
+                }
+            },
+            "balance": {
+                "id": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "float": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "pettyCash": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "allTotal": {
+                "electricity": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "water": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "sewerage": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "otherIncome": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "securityDeposit": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "ice": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashIn": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "deposit": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "payment": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashOutOther": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "cashOut": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "balance": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "safeBalance": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    ],
+    "bothHalfTotal": {
+        "dailyRecord": [
+            0,
+            0
+        ],
+        "openingBalance": [
+            0,
+            0
+        ],
+        "closingBalance": [
+            0,
+            0
+        ],
+        "cashIn": {
+            "electricity": {
+                "business": [
+                    0,
+                    0
+                ],
+                "businessSpecial": [
+                    0,
+                    0
+                ],
+                "government": [
+                    0,
+                    0
+                ],
+                "domestic": [
+                    0,
+                    0
+                ]
+            },
+            "water": {
+                "business": [
+                    0,
+                    0
+                ],
+                "businessSpecial": [
+                    0,
+                    0
+                ],
+                "government": [
+                    0,
+                    0
+                ],
+                "domestic": [
+                    0,
+                    0
+                ]
+            },
+            "sewerage": {
+                "business": [
+                    0,
+                    0
+                ],
+                "businessSpecial": [
+                    0,
+                    0
+                ],
+                "government": [
+                    0,
+                    0
+                ],
+                "domestic": [
+                    0,
+                    0
+                ]
+            },
+            "ice": {
+                "ice": [
+                    0,
+                    0
+                ]
+            },
+            "otherIncome": {
+                "miscellaneous": [
+                    0,
+                    0
+                ],
+                "gst": [
+                    0,
+                    0
+                ]
+            },
+            "securityDeposit": {
+                "securityDeposit": [
+                    0,
+                    0
+                ]
+            }
+        },
+        "cashOut": {
+            "deposit": {
+                "cash": [
+                    0,
+                    0
+                ],
+                "cashSecurityDeposit": [
+                    0,
+                    0
+                ],
+                "atm": [
+                    0,
+                    0
+                ],
+                "online": [
+                    0,
+                    0
+                ],
+                "cashAgent": [
+                    0,
+                    0
+                ],
+                "cheque": [
+                    0,
+                    0
+                ],
+                "cashCard": [
+                    0,
+                    0
+                ],
+                "directTransfer": [
+                    0,
+                    0
+                ]
+            },
+            "payment": {
+                "salary": [
+                    0,
+                    0
+                ],
+                "pettyCash": [
+                    0,
+                    0
+                ],
+                "securityDeposit": [
+                    0,
+                    0
+                ],
+                "invoice": [
+                    0,
+                    0
+                ],
+                "gst": [
+                    0,
+                    0
+                ]
+            },
+            "cashOutOther": {
+                "settlement": [
+                    0,
+                    0
+                ]
+            }
+        },
+        "balance": {
+            "id": [
+                0,
+                0
+            ],
+            "float": [
+                0,
+                0
+            ],
+            "pettyCash": [
+                0,
+                0
+            ]
+        },
+        "allTotal": {
+            "electricity": [
+                0,
+                0
+            ],
+            "water": [
+                0,
+                0
+            ],
+            "sewerage": [
+                0,
+                0
+            ],
+            "otherIncome": [
+                0,
+                0
+            ],
+            "securityDeposit": [
+                0,
+                0
+            ],
+            "ice": [
+                0,
+                0
+            ],
+            "cashIn": [
+                0,
+                0
+            ],
+            "deposit": [
+                0,
+                0
+            ],
+            "payment": [
+                0,
+                0
+            ],
+            "cashOutOther": [
+                0,
+                0
+            ],
+            "cashOut": [
+                0,
+                0
+            ],
+            "balance": [
+                0,
+                0
+            ],
+            "safeBalance": [
+                0,
+                0
+            ]
+        }
+    },
+    "grandTotal": {
+        "dailyRecord": [
+            0
+        ],
+        "openingBalance": [
+            0
+        ],
+        "closingBalance": [
+            0
+        ],
+        "cashIn": {
+            "electricity": {
+                "business": [
+                    0
+                ],
+                "businessSpecial": [
+                    0
+                ],
+                "government": [
+                    0
+                ],
+                "domestic": [
+                    0
+                ]
+            },
+            "water": {
+                "business": [
+                    0
+                ],
+                "businessSpecial": [
+                    0
+                ],
+                "government": [
+                    0
+                ],
+                "domestic": [
+                    0
+                ]
+            },
+            "sewerage": {
+                "business": [
+                    0
+                ],
+                "businessSpecial": [
+                    0
+                ],
+                "government": [
+                    0
+                ],
+                "domestic": [
+                    0
+                ]
+            },
+            "ice": {
+                "ice": [
+                    0
+                ]
+            },
+            "otherIncome": {
+                "miscellaneous": [
+                    0
+                ],
+                "gst": [
+                    0
+                ]
+            },
+            "securityDeposit": {
+                "securityDeposit": [
+                    0
+                ]
+            }
+        },
+        "cashOut": {
+            "deposit": {
+                "cash": [
+                    0
+                ],
+                "cashSecurityDeposit": [
+                    0
+                ],
+                "atm": [
+                    0
+                ],
+                "online": [
+                    0
+                ],
+                "cashAgent": [
+                    0
+                ],
+                "cheque": [
+                    0
+                ],
+                "cashCard": [
+                    0
+                ],
+                "directTransfer": [
+                    0
+                ]
+            },
+            "payment": {
+                "salary": [
+                    0
+                ],
+                "pettyCash": [
+                    0
+                ],
+                "securityDeposit": [
+                    0
+                ],
+                "invoice": [
+                    0
+                ],
+                "gst": [
+                    0
+                ]
+            },
+            "cashOutOther": {
+                "settlement": [
+                    0
+                ]
+            }
+        },
+        "balance": {
+            "id": [
+                0
+            ],
+            "float": [
+                0
+            ],
+            "pettyCash": [
+                0
+            ]
+        },
+        "allTotal": {
+            "electricity": [
+                0
+            ],
+            "water": [
+                0
+            ],
+            "sewerage": [
+                0
+            ],
+            "otherIncome": [
+                0
+            ],
+            "securityDeposit": [
+                0
+            ],
+            "ice": [
+                0
+            ],
+            "cashIn": [
+                0
+            ],
+            "deposit": [
+                0
+            ],
+            "payment": [
+                0
+            ],
+            "cashOutOther": [
+                0
+            ],
+            "cashOut": [
+                0
+            ],
+            "balance": [
+                0
+            ],
+            "safeBalance": [
+                0
+            ]
+        }
+    }
+}
+  console.log(data);
+
+  var table = document.getElementById("cpr");
+
+  var row = table.insertRow(0);
+  row.style="text-align: center";
+  row.classList="class-b bg-blue";
+
+  var cellDetail = row.insertCell(0);
+  cellDetail.innerHTML = "Details";
+  cellDetail.style = "width: 200px; padding 3px;";
+  var count = 0;
+  for(count; count < 15; count++){
+    var cell = row.insertCell(count + 1);
+    cell.classList = "padding-3";
+    cell.innerHTML = count + 1;
+  }
+  var cellTotal = row.insertCell(count + 1);
+  cellTotal.innerHTML = "Total";
+
+  // Find a <table> element with id="myTable":
+    // var table = document.getElementById("cpr");
+
+  // Create an empty <tr> element and add it to the 1st position of the table:
+  // var row = table.insertRow(0);
+
+  // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+  // var cell1 = row.insertCell(0);
+  // var cell2 = row.insertCell(1);
+
+  // Add some text to the new cells:
+  // cell1.innerHTML = "NEW CELL1";
+  // cell2.innerHTML = "NEW CELL2";
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
 
 </html>

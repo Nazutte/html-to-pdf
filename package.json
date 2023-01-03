@@ -7,6 +7,6 @@
     "dev": "node index.js"
   },
   "dependencies": {
-    "html-pdf": "^3.0.1"
+    "puppeteer": "^19.4.1"
   }
 }
